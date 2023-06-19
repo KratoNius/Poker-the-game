@@ -1,0 +1,11 @@
+D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\Poker the game.exe.config
+D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\Poker the game.exe
+D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\Poker the game.pdb
+D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.csproj.AssemblyReference.cache
+D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.csproj.SuggestedBindingRedirects.cache
+D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker_the_game.Form1.resources
+D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker_the_game.Properties.Resources.resources
+D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.csproj.GenerateResource.cache
+D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.csproj.CoreCompileInputs.cache
+D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.exe
+D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.pdb
