@@ -9,3 +9,15 @@ D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.csproj.
 D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.csproj.CoreCompileInputs.cache
 D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.exe
 D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.pdb
+D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\MySql.Data.dll
+D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\Google.Protobuf.dll
+D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\ZstdNet.dll
+D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\BouncyCastle.Crypto.dll
+D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\System.Memory.dll
+D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\System.Buffers.dll
+D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\K4os.Compression.LZ4.dll
+D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\K4os.Hash.xxHash.dll
+D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\System.Numerics.Vectors.dll
+D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.exe.config
+D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.csproj.CopyComplete

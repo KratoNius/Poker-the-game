@@ -51,6 +51,10 @@
 			this.label7 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.progressBar1 = new System.Windows.Forms.ProgressBar();
+			this.label11 = new System.Windows.Forms.Label();
+			this.button1 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -307,13 +311,54 @@
 			this.label9.TabIndex = 28;
 			this.label9.Text = "Осталось:";
 			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Tahoma", 16F);
+			this.label10.Location = new System.Drawing.Point(715, 12);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(104, 27);
+			this.label10.TabIndex = 30;
+			this.label10.Text = "Уровень:";
+			// 
+			// progressBar1
+			// 
+			this.progressBar1.Location = new System.Drawing.Point(720, 42);
+			this.progressBar1.Name = "progressBar1";
+			this.progressBar1.Size = new System.Drawing.Size(203, 23);
+			this.progressBar1.TabIndex = 31;
+			this.progressBar1.BackColorChanged += new System.EventHandler(this.progressBar1_BackColorChanged);
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.Font = new System.Drawing.Font("Tahoma", 16F);
+			this.label11.Location = new System.Drawing.Point(929, 38);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(24, 27);
+			this.label11.TabIndex = 32;
+			this.label11.Text = "1";
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(238, 459);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.TabIndex = 33;
+			this.button1.Text = "button1";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1154, 598);
+			this.Controls.Add(this.button1);
+			this.Controls.Add(this.label11);
+			this.Controls.Add(this.progressBar1);
+			this.Controls.Add(this.label10);
 			this.Controls.Add(this.label8);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.label6);
@@ -381,6 +426,10 @@
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.ProgressBar progressBar1;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Button button1;
 	}
 }
 

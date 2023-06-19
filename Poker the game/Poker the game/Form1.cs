@@ -6,9 +6,12 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Poker_the_game
 {
@@ -18,8 +21,13 @@ namespace Poker_the_game
 		{
 			InitializeComponent();
 		}
+		private readonly string path = "config.txt";
 		Random random = new Random();
+		MySqlDataAdapter adapterMain;
+		DataTable dtMain;
+		MySqlCommand Command;
 		int Max_fishki = 200;
+		double xp;
 		void FLOP()
 		{
 			foreach (var image in Cards.allImages) 
@@ -76,6 +84,14 @@ namespace Poker_the_game
 		}
 		private void Form1_Load(object sender, EventArgs e)
 		{
+			progressBar1.Minimum = 0;
+			string text = "";
+			MySqlConnection conn = new MySqlConnection();
+			using (StreamReader reader = new StreamReader(path))
+			{
+				text = reader.ReadToEnd();
+				conn = new MySqlConnection(text);
+			}
 			MessageBox.Show("Игра началась! Время раздачи карт игрокам!");
 			label1.BackColor = Color.Transparent;
 			pictureBox1.Visible = false;
@@ -105,6 +121,73 @@ namespace Poker_the_game
 			label8.Text = label8.Text + "0";
 			label6.Text = label6.Text + "0";
 			label3.Text = label3.Text + "0";
+			conn.Open();
+			string combox1 = "SELECT `Требование к уровню` FROM `уровни` WHERE id=1";
+			MySqlCommand command1 = new MySqlCommand(combox1, conn);
+			command1.CommandTimeout = 0;
+			MySqlDataReader reader1 = command1.ExecuteReader();
+			while (reader1.Read())
+			{
+				progressBar1.Maximum = Convert.ToInt32(reader1[0]);
+				label11.Text = reader1[0].ToString() + " xp";
+
+			}
+			reader1.Close();
+			conn.Close();
+
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			string text = "";
+			MySqlConnection conn = new MySqlConnection();
+			using (StreamReader reader = new StreamReader(path))
+			{
+				text = reader.ReadToEnd();
+				conn = new MySqlConnection(text);
+			}
+			xp += 100;
+			Command = new MySqlCommand();
+			conn.Open();
+			Command = conn.CreateCommand();
+			Command.CommandText = "INSERT INTO `dbpok`.`прогресc`\r\n(`Прогресc`)\r\nVALUES\r\n(\""+xp.ToString()+"\");";
+			Command.ExecuteNonQuery();
+
+			string combox1 = "SELECT `Требование к уровню` FROM `уровни` WHERE id=1";
+			MySqlCommand command1 = new MySqlCommand(combox1, conn);
+			command1.CommandTimeout = 0;
+			MySqlDataReader reader1 = command1.ExecuteReader();
+			while (reader1.Read())
+			{
+				progressBar1.Maximum = Convert.ToInt32(reader1[0]);
+				label11.Text = reader1[0].ToString() + " xp";
+
+			}
+			reader1.Close();
+			conn.Close();
+
+			conn.Open();
+			string combox2 = "SELECT `Прогресc` FROM `прогресc` WHERE id=1";
+			MySqlCommand command2 = new MySqlCommand(combox2, conn);
+			command2.CommandTimeout = 0;
+			MySqlDataReader reader2 = command2.ExecuteReader();
+			while (reader2.Read())
+			{
+				double fieldValue = reader2.GetDouble(0);
+				progressBar1.Value = (int)Math.Round((fieldValue / progressBar1.Maximum) * progressBar1.Maximum);
+			}
+
+			reader2.Close();
+			conn.Close();
+			string str = label11.Text;
+			double n = Convert.ToDouble(str.Substring(0, str.Length - 3));
+			double num = n - progressBar1.Value;
+			label11.Text = num.ToString();
+
+		}
+
+		private void progressBar1_BackColorChanged(object sender, EventArgs e)
+		{
 
 		}
 	}
