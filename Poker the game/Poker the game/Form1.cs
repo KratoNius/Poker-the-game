@@ -18,21 +18,22 @@ namespace Poker_the_game
 		{
 			InitializeComponent();
 		}
-		byte[] imageBytes;
+		Random random = new Random();
+		void Mass()
+		{
+			foreach (var image in Cards.allImages) 
+			{
+				int index1 = random.Next(Cards.allImages.Length);
+				int index2 = random.Next(Cards.allImages.Length);
+				int index3 = random.Next(Cards.allImages.Length);
+				pictureBox1.Image = Cards.allImages[index1];
+				pictureBox2.Image = Cards.allImages[index2];
+				pictureBox3.Image = Cards.allImages[index3];
+			}
+		}
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			string imageUrl = "https://github.com/KratoNius/Poker-the-game/blob/main/1670225311_grizly-club-p-shablon-igralnikh-kart-6.jpg";
-
-			using (var client = new WebClient())
-			{
-				imageBytes = client.DownloadData(imageUrl);
-			}
-
-			using (var stream = new MemoryStream(imageBytes))
-			{
-				var image = Image.FromStream(stream);
-				pictureBox1.Image = image;
-			}
+			Mass();	
 		}
 	}
 }
