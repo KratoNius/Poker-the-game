@@ -30,17 +30,21 @@ namespace Poker_the_game
 		double xp;
 		void FLOP()
 		{
-			foreach (var image in Cards.allImages) 
-			{
+			
 				//флоп
-				int indexF1 = random.Next(Cards.allImages.Length);
-				int indexF2 = random.Next(Cards.allImages.Length);
-				int indexF3 = random.Next(Cards.allImages.Length);
-				pictureBox1.Image = Cards.allImages[indexF1];
-				pictureBox2.Image = Cards.allImages[indexF2];
-				pictureBox3.Image = Cards.allImages[indexF3];
+				foreach (var image in Cards.allImages)
+				{
+					//флоп
+					int indexF1 = random.Next(Cards.allImages.Length);
+					int indexF2 = random.Next(Cards.allImages.Length);
+					int indexF3 = random.Next(Cards.allImages.Length);
+					pictureBox1.Image = Cards.allImages[indexF1];
+					pictureBox2.Image = Cards.allImages[indexF2];
+					pictureBox3.Image = Cards.allImages[indexF3];
 
-			}
+				}
+
+			
 		}
 		void CARD()
 		{
@@ -99,7 +103,7 @@ namespace Poker_the_game
 			pictureBox3.Visible = false;
 			pictureBox4.Visible = false;
 			pictureBox5.Visible = false;
-			//CARD();
+			CARD();
 			pictureBox12.BackgroundImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
 			pictureBox13.BackgroundImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
 			pictureBox14.BackgroundImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
@@ -135,6 +139,7 @@ namespace Poker_the_game
 			reader1.Close();
 			conn.Close();
 
+			
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -189,6 +194,33 @@ namespace Poker_the_game
 		private void progressBar1_BackColorChanged(object sender, EventArgs e)
 		{
 
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			Help help = new Help();
+			help.ShowDialog();
+		}
+
+		private void Form1_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Escape)
+			{
+				//this.Hide();
+				this.Close();
+			}
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			pictureBox1.Visible = true;
+			pictureBox2.Visible = true;
+			pictureBox3.Visible = true;
+			pictureBox4.Visible = true;
+			pictureBox5.Visible = true;
+			FLOP();
+			tirn();
+			river();
 		}
 	}
 }

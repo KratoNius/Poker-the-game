@@ -21,3 +21,4 @@ D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\K4os.Hash.xxHash.dll
 D:\Poker-the-game\Poker the game\Poker the game\bin\Debug\System.Numerics.Vectors.dll
 D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.exe.config
 D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker the game.csproj.CopyComplete
+D:\Poker-the-game\Poker the game\Poker the game\obj\Debug\Poker_the_game.Help.resources
