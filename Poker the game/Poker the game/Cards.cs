@@ -24,8 +24,6 @@ namespace Poker_the_game
 		static Image bJ = Image.FromFile(@"Resources\\Игральные карты\\Бубны\\Старшие карты\\Jb.JPG");
 		static Image bQ = Image.FromFile(@"Resources\\Игральные карты\\Бубны\\Старшие карты\\Kb.JPG");
 		static Image bK = Image.FromFile(@"Resources\\Игральные карты\\Бубны\\Старшие карты\\Qb.JPG");
-		//все карты бубен
-		public static Image[] B = {b2, b3, b4, b5, b6, b7, b8, b9, b10, bA, bJ, bQ, bK};
 
 		//номерные карты крести
 		static Image k2 = Image.FromFile(@"Resources\\Игральные карты\\Крести\\Номерные карты\\2k.JPG");
@@ -42,8 +40,6 @@ namespace Poker_the_game
 		static Image kJ = Image.FromFile(@"Resources\\Игральные карты\\Крести\\Старшие карты\\Jk.JPG");
 		static Image kQ = Image.FromFile(@"Resources\\Игральные карты\\Крести\\Старшие карты\\Kk.JPG");
 		static Image kK = Image.FromFile(@"Resources\\Игральные карты\\Крести\\Старшие карты\\Qk.JPG");
-		//все карты крести
-		public static Image[] K = { k2, k3, k4, k5, k6, k7, k8, k9, k10, kA, kJ, kQ, kK};
 
 		//номерные карты пик
 		static Image p2 = Image.FromFile(@"Resources\\Игральные карты\\Пики\\Номерные карты\\2p.JPG");
@@ -60,8 +56,6 @@ namespace Poker_the_game
 		static Image pJ = Image.FromFile(@"Resources\\Игральные карты\\Пики\\Старшие карты\\Jp.JPG");
 		static Image pQ = Image.FromFile(@"Resources\\Игральные карты\\Пики\\Старшие карты\\Kp.JPG");
 		static Image pK = Image.FromFile(@"Resources\\Игральные карты\\Пики\\Старшие карты\\Qp.JPG");
-		//все карты пик
-		public static Image[] P = { p2, p3, p4, p5, p6, p7, p8, p9, p10, pA, pJ, pQ, pK };
 
 		//номерные карты червей
 		static Image ch2 = Image.FromFile(@"Resources\\Игральные карты\\Черви\\Номерные карты\\2ch.JPG");
@@ -78,9 +72,26 @@ namespace Poker_the_game
 		static Image chJ = Image.FromFile(@"Resources\\Игральные карты\\Черви\\Старшие карты\\Jch.JPG");
 		static Image chQ = Image.FromFile(@"Resources\\Игральные карты\\Черви\\Старшие карты\\Kch.JPG");
 		static Image chK = Image.FromFile(@"Resources\\Игральные карты\\Черви\\Старшие карты\\Qch.JPG");
-		//все карты червей
-		public static Image[] CH = { ch2, ch3, ch4, ch5, ch6, ch7, ch8, ch9, ch10, chA, chJ, chQ, chK };
 
-		public static Image[] allImages = B.Concat(K).Concat(P).Concat(CH).ToArray();
+		public static Image[] Крести = { k2, k3, k4, k5, k6, k7, k8, k9, k10, kA, kJ, kQ, kK};
+		public static Image[] Бубны = {b2, b3, b4, b5, b6, b7, b8, b9, b10, bA, bJ, bQ, bK};
+		public static Image[] Черви = { ch2, ch3, ch4, ch5, ch6, ch7, ch8, ch9, ch10, chA, chJ, chQ, chK };
+		public static Image[] Пики = { p2, p3, p4, p5, p6, p7, p8, p9, p10, pA, pJ, pQ, pK };
+
+		public static Image[] Двойка = { b2, ch2, p2, k2 };
+		public static Image[] Тройка = { b3, ch3, p3, k3 };
+		public static Image[] Четверка = { b4, ch4, p4, k4 };
+		public static Image[] Пятерка = { b5, ch5, p5, k5 };
+		public static Image[] Шестерка = { b6, ch6, p6, k6 };
+		public static Image[] Семерка = { b7, ch7, p7, k7 };
+		public static Image[] Восьмерка = { b8, ch8, p8, k8 };
+		public static Image[] Девятка = { b9, ch9, p9, k9 };
+		public static Image[] Десятка = { b10, ch10, p10, k10 };
+		public static Image[] Валет = { bJ, chJ, pJ, kJ };
+		public static Image[] Дама = { bQ, chQ, pQ, kQ };
+		public static Image[] Король = { bK, chK, pK, kK };
+		public static Image[] Туз = { bA, chA, pA, kA };
+
+		public static Image[] ALL = Крести.Concat(Бубны).Concat(Черви).Concat(Пики).ToArray();
 	}
 }
